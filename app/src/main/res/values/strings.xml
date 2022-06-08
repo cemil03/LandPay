@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">LandPay2</string>
+    <string name="search_here">Search Here</string>
+    <string name="search">Search</string>
+    <string name="salary">Salary</string>
+    <string name="LandPay">LandPay</string>
+    <string-array name="currency">
+    <item>USD</item>
+    <item>EUR</item>
+    <item>RUB</item>
+    </string-array>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="min_wage">Minimum Wage</string>
+    <string name="high_wage">High Wage</string>
+    <string name="average_wage">Average Wage</string>
+    <string name="canada">Canada</string>
+    <string name="min_wage_in_Canada">2400</string>
+    <string name="average_wage_in_Canada">5600</string>
+    <string name="rec_wage_in_Canada">15000</string>
+    <string name="standard_of_living_word">Standard of Living</string>
+    <string name="tax_word">Income Tax</string>
+</resources>

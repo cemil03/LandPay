@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        android:id="@+id/trans"
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+        <OnSwipe
+            motion:dragDirection="dragUp"
+            motion:touchAnchorId="@id/viewSwipe"
+            motion:touchRegionId="@id/viewSwipe" />
+
+        <KeyFrameSet>
+
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/viewSwipe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <CustomAttribute
+                motion:attributeName="background"
+                motion:customColorDrawableValue="@color/white" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/tvCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/ivSwipe" />
+        <Constraint
+            android:id="@+id/ivSwipe"
+            android:visibility="invisible"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/vRed"
+            android:layout_width="380dp"
+            android:layout_height="110dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/tvCountry" />
+        <Constraint
+            android:id="@+id/vOrange"
+            android:layout_width="380dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="5dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/vRed" />
+        <Constraint
+            android:id="@+id/vGreen"
+            android:layout_width="380dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="5dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/vOrange" />
+        <Constraint
+            android:id="@+id/tvMinWageWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            motion:layout_constraintStart_toStartOf="@+id/vRed"
+            motion:layout_constraintTop_toTopOf="@id/vRed" />
+
+        <Constraint
+            android:id="@+id/tvAverageWageWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            motion:layout_constraintStart_toStartOf="@+id/vOrange"
+            motion:layout_constraintTop_toTopOf="@id/vOrange" />
+
+        <Constraint
+            android:id="@+id/tvMaxWageWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            motion:layout_constraintStart_toStartOf="@+id/vGreen"
+            motion:layout_constraintTop_toTopOf="@id/vGreen" />
+
+        <Constraint
+            android:id="@+id/donutProgStanOfLiving"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:visibility="visible"
+            android:layout_marginTop="10dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toStartOf="@+id/donutProgOfTax"
+            motion:layout_constraintTop_toBottomOf="@+id/tvStandardOfLivingWord"/>
+
+        <Constraint
+            android:id="@+id/donutProgOfTax"
+            android:visibility="visible"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="10dp"
+            motion:layout_constraintStart_toEndOf="@+id/donutProgStanOfLiving"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/tvTaxWord"/>
+
+        <Constraint
+            android:id="@+id/tvStandardOfLivingWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="6dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toStartOf="@+id/tvTaxWord"
+            motion:layout_constraintTop_toBottomOf="@+id/vGreen"/>
+
+        <Constraint
+            android:id="@+id/tvTaxWord"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_marginTop="20dp"
+            motion:layout_constraintStart_toEndOf="@+id/tvStandardOfLivingWord"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/vGreen"/>
+
+        <Constraint
+            android:id="@+id/tvStandardOfLiving"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            motion:layout_constraintStart_toStartOf="@id/donutProgStanOfLiving"
+            motion:layout_constraintEnd_toEndOf="@+id/donutProgStanOfLiving"
+            motion:layout_constraintTop_toTopOf="@+id/donutProgStanOfLiving"
+            motion:layout_constraintBottom_toBottomOf="@+id/donutProgStanOfLiving"/>
+        <Constraint
+            android:id="@+id/tvTax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            motion:layout_constraintStart_toStartOf="@id/donutProgOfTax"
+            motion:layout_constraintEnd_toEndOf="@+id/donutProgOfTax"
+            motion:layout_constraintTop_toTopOf="@+id/donutProgOfTax"
+            motion:layout_constraintBottom_toBottomOf="@+id/donutProgOfTax"/>
+
+    </ConstraintSet>
+
+
+</MotionScene>

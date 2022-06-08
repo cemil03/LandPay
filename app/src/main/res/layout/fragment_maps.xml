@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/motionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/fragment_maps_scene">
+
+    <ImageView
+        android:id="@+id/photo_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img" />
+
+    <View
+        android:id="@+id/vWhite"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/design_search_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/vGif"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/earth"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="map,tvCountry,viewSwipe,iconDollarGreen,
+        iconDollarOrange, iconDollarRed,ivSwipe,svCountry,
+        tvMaxWage,tvAverageWage,tvAverageWageWord,tvMaxWageWord,
+        tvMinWage,tvMinWageWord,vRed,vOrange,vGreen,ivSwipe" />
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MapsFragment" />
+
+    <SearchView
+        android:id="@+id/svCountry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/design_search_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewSwipe"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:background="@drawable/design_corner_on_swipe"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivSwipe"
+        android:layout_width="30dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/design_button_on_swipe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewSwipe" />
+
+
+    <TextView
+        android:id="@+id/tvCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:text="@string/canada"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivSwipe" />
+
+    <View
+        android:id="@+id/vRed"
+        android:layout_width="125dp"
+        android:layout_height="120dp"
+        android:background="@drawable/design_text_view_min_wage"
+        app:layout_constraintEnd_toStartOf="@+id/vOrange"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCountry" />
+
+    <TextView
+        android:id="@+id/tvMinWageWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:text="@string/min_wage"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/vRed"
+        app:layout_constraintStart_toStartOf="@+id/vRed"
+        app:layout_constraintTop_toTopOf="@+id/vRed" />
+
+    <TextView
+        android:id="@+id/tvMinWage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="10dp"
+        android:text="@string/min_wage_in_Canada"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/vRed"
+        app:layout_constraintEnd_toEndOf="@+id/vRed" />
+
+    <ImageView
+        android:id="@+id/iconDollarRed"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/dollar_for_map"
+        app:layout_constraintBottom_toBottomOf="@id/vRed"
+        app:layout_constraintStart_toStartOf="@id/vRed"
+        app:tint="@color/white" />
+
+    <View
+        android:id="@+id/vOrange"
+        android:layout_width="125dp"
+        android:layout_height="120dp"
+        android:background="@drawable/design_text_view_average_wage"
+
+        app:layout_constraintEnd_toStartOf="@+id/vGreen"
+        app:layout_constraintStart_toEndOf="@+id/vRed"
+        app:layout_constraintTop_toBottomOf="@+id/tvCountry" />
+
+    <TextView
+        android:id="@+id/tvAverageWageWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:text="@string/average_wage"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/vOrange"
+        app:layout_constraintStart_toStartOf="@+id/vOrange"
+        app:layout_constraintTop_toTopOf="@+id/vOrange" />
+
+    <TextView
+        android:id="@+id/tvAverageWage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/average_wage_in_Canada"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/vOrange"
+        app:layout_constraintEnd_toEndOf="@+id/vOrange" />
+
+    <ImageView
+        android:id="@+id/iconDollarOrange"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/dollar_for_map"
+        app:layout_constraintBottom_toBottomOf="@id/vOrange"
+        app:layout_constraintStart_toStartOf="@id/vOrange"
+        app:tint="@color/white" />
+
+    <View
+        android:id="@+id/vGreen"
+        android:layout_width="125dp"
+        android:layout_height="120dp"
+
+        android:background="@drawable/design_text_view_max_wage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/vOrange"
+        app:layout_constraintTop_toBottomOf="@+id/tvCountry" />
+
+    <TextView
+        android:id="@+id/tvMaxWageWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:text="@string/high_wage"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/vGreen"
+        app:layout_constraintStart_toStartOf="@+id/vGreen"
+        app:layout_constraintTop_toTopOf="@+id/vGreen" />
+
+    <TextView
+        android:id="@+id/tvMaxWage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/rec_wage_in_Canada"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/vGreen"
+        app:layout_constraintEnd_toEndOf="@+id/vGreen" />
+
+    <ImageView
+        android:id="@+id/iconDollarGreen"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/dollar_for_map"
+        app:layout_constraintBottom_toBottomOf="@id/vGreen"
+        app:layout_constraintStart_toStartOf="@id/vGreen"
+        app:tint="@color/white" />
+
+
+    <TextView
+        android:id="@+id/tvStandardOfLivingWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/standard_of_living_word"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/tvTaxWord"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vGreen"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvTaxWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tax_word"
+        android:visibility="invisible"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvStandardOfLivingWord"
+        app:layout_constraintTop_toBottomOf="@+id/vGreen" />
+
+    <app.futured.donut.DonutProgressView
+        android:id="@+id/donutProgStanOfLiving"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:visibility="invisible"
+        app:donut_cap="100"
+        app:donut_gapAngle="270"
+        app:donut_gapWidth="0"
+        app:donut_strokeWidth="14dp"
+        app:layout_constraintEnd_toStartOf="@+id/donutProgOfTax"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvStandardOfLivingWord"
+
+        />
+
+    <app.futured.donut.DonutProgressView
+        android:id="@+id/donutProgOfTax"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:visibility="invisible"
+        app:donut_cap="100"
+        app:donut_gapAngle="270"
+        app:donut_gapWidth="0"
+        app:donut_strokeWidth="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/donutProgStanOfLiving"
+        app:layout_constraintTop_toBottomOf="@id/tvTaxWord" />
+
+
+    <TextView
+        android:id="@+id/tvStandardOfLiving"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvTax"
+        app:layout_constraintTop_toTopOf="@+id/donutProgStanOfLiving"/>
+
+
+    <TextView
+        android:id="@+id/tvTax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/tvStandardOfLiving"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/donutProgOfTax"/>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

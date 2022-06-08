@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "934144312705",
+    "project_id": "landpay-7ed6d",
+    "storage_bucket": "landpay-7ed6d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934144312705:android:824fcc35a0076974c41480",
+        "android_client_info": {
+          "package_name": "com.example.landpay2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934144312705-thcdptk7nbhh2ousqiv6g1rvugh7kem9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9CropPyXR4xoxvlyYM6B-ZaFuhgBnHDA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "934144312705-thcdptk7nbhh2ousqiv6g1rvugh7kem9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
