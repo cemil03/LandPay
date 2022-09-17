@@ -25,8 +25,11 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.LatLngBounds
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.maps.android.geojson.GeoJsonLayer
+import kotlinx.coroutines.internal.LockFreeLinkedListNode
+import java.lang.StringBuilder
 import java.sql.Time
 import java.util.*
+import kotlin.collections.HashMap
 import kotlin.concurrent.timerTask
 import kotlin.coroutines.coroutineContext
 
@@ -171,12 +174,13 @@ class MapsFragment : Fragment(), OnMapReadyCallback {
 
         }
 
-        var a = R.raw.border_egypt
+
 
     }
 
     private fun getMoneyInDollars(money: Money): Double {
         var moneyInDollars = 0.0
+
         when (money.currency) {
             Currency.getInstance("USD") -> {
                 moneyInDollars = money.salary.toDouble()
